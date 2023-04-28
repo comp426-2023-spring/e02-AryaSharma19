@@ -3,11 +3,16 @@
 // https://github.com/jdmar3/coinserver
 
 
-
 function playGame() {
     console.log("aha")
-
+    fetch('/app/rps').then(response => response.json()).then(data => {
+        console.log(data);
+  });
+    
 }
+
+
+function showHideShots() {}
 
 function startOver() {
     console.log("Need to work on this")

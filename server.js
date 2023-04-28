@@ -5,6 +5,7 @@ import { createRequire } from 'node:module';
 import bodyParser from "body-parser";
 import { rps } from "./lib/rpsls.js";
 import { rpsls } from "./lib/rpsls.js";
+import fetch from "node-fetch";
 const require = createRequire(import.meta.url);
 // The above two lines allow us to use ES methods and CJS methods for loading
 // dependencies.
