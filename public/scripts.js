@@ -3,3 +3,12 @@
 // https://github.com/jdmar3/coinserver
 
 
+
+function playGame() {
+    console.log("aha")
+
+}
+
+function startOver() {
+    console.log("Need to work on this")
+}
