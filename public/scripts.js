@@ -7,6 +7,14 @@ var rpsls = false;
 var opponent = false;
 moves = ["rock", "paper", "scissors", "lizard", "spock"];
 move = "rock"
+game = "testing aha ahah"
+
+
+function returnresults() {
+    return game;
+}
+
+
 
 function playGame() {
     console.log("aha")
@@ -20,6 +28,7 @@ function playGame() {
     window.location.href = 'moverpsls.html';
   }
   else {
+    
     window.location.href = 'results.html';
   }
 }
