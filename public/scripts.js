@@ -13,7 +13,7 @@ function playGame() {
     fetch('/app/rps').then(response => response.json()).then(data => {
         console.log(data);
   });
-
+  window.location.href = 'results.html';
 }
 
 
@@ -39,4 +39,5 @@ function playingopponent() {
 
 function startOver() {
     console.log("Need to work on this")
+    window.location.href = 'index.html';
 }
