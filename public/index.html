@@ -1,36 +1,36 @@
-<html>
+<!DOCTYPE html>
     <head>
         <title>Arya's Rock Paper Shoot</title>
-        <link rel="icon" href="data:," />
+        <link rel="icon" href="data:,">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles.css" rel="stylesheet">
 		<script src="./scripts.js"></script>
         <div style="text-align:center">
             Welcome to Arya's COMP 426 Final Project:
-            <br/>
+            <br>
             Rock, Paper, Scissors
-            <br/><br/>
+            <br><br>
         </div>
     </head>
     <body>
-        
-        <form id="opponent-and-game" controls>
+        <form id="opponent-and-game">
             Which game would you like to play?
-            <br/><br/>
+            <br><br>
             <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
 			<label for="rps">Play rock, paper, scissors?</label>
-			<br/><br/>
+			<br><br>
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="playingrpsls()">
 			<label for="rpsls">Play rock, paper, scissors, lizard, spock?</label>
-			<br/><br/>
+			<br><br>
             Would you like to play against somone?
-            <br/><br/>
+            <br><br>
             <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
             <label for="opponent">Play against an opponent</label>
-            <br/><br/>
+            <br><br>
             <button type="button" id="first-submit" onclick="firstsubmit()">Submit</button>
-            <br/><br/>
+            <br><br>
         </form>
-        
         <form id="rps-input" hidden="true">
             <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked="checked" onclick="playgamefromrpsorrpsls(0)">
             <label class="shots rps">Rock</label>
@@ -42,25 +42,22 @@
 			<label id="lizard-label">Lizard</label>
 			<input type="radio" id="spock" name="shot" value="spock" class="rpsls shots" onclick="playgamefromrpsorrpsls(4)">
 			<label id="spock-label">Spock</label>
-            <br/><br/>
+            <br><br>
             <button type="button" id="second-submit" onclick="secondsubmit()">Submit</button>
         </form>
-
         <div id="results" hidden="true"></div>
-
-        <br/><br/>
+        <br><br>
         <div style="text-align:center">
             <button type="button" id="startover" onclick="startOver()">Start Over</button>
-            <br/><br/>
+            <br><br>
 
             <form id="rules-form">
                 <button type="button" id="rules-button" onclick="viewrules()">View Rules</button>
-                <br/><br/>
+                <br><br>
                 <div id="rules" hidden="true"></div>
-                <br/><br/>
+                <br><br>
                 <button type="button" id="hide-rules-button" onclick="hiderules()" hidden="true">Hide Rules</button>
             </form>
         </div>
-
     </body>
 </html>
