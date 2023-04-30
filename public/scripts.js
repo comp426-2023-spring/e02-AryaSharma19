@@ -9,14 +9,7 @@ var rps = true;
 var move = "rock";
 var rps_endpoint = "/app/rps/play/";
 var rpsls_endpoint = "/app/rpsls/play/";
-var game_results = {};
-
-
-//fetch('/app/rps').then(response => response.json()).then(data => {
-    //console.log(data);
-//});
  
-
 function playgamefromrpsorrpsls(index) {
     move = moves[index]
     
@@ -33,8 +26,9 @@ function firstsubmit() {
             random_move = moves[random_move];
             var api_call = rps_endpoint + random_move;
             fetch(api_call).then(response => response.json()).then(data => {
-                game_results = data;
-                
+                document.getElementById("results").innerText = JSON.stringify(data);
+                document.getElementById("opponent-and-game").hidden = true;
+                document.getElementById("results").hidden = false;
             });
         } else {
             
@@ -42,13 +36,12 @@ function firstsubmit() {
             random_move = moves[random_move];
             var api_call = rpsls_endpoint + random_move;
             fetch(api_call).then(response => response.json()).then(data => {
-                game_results = data;
-                
+                document.getElementById("results").innerText = JSON.stringify(data);
+                document.getElementById("opponent-and-game").hidden = true;
+                document.getElementById("results").hidden = false;
             });
         }
-        document.getElementById("results").innerText = JSON.stringify(game_results);
-        document.getElementById("opponent-and-game").hidden = true;
-        document.getElementById("results").hidden = false;
+        
     }
 }
 
