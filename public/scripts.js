@@ -2,69 +2,58 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 
-var rps = true;
-var rpsls = false;
 var opponent = false;
-moves = ["rock", "paper", "scissors", "lizard", "spock"];
-move = "rock"
-game = "testing aha ahah"
+const moves = ["rock", "paper", "scissors", "lizard", "spock"];
 
+//fetch('/app/rps').then(response => response.json()).then(data => {
+    //console.log(data);
+//});
+ 
+
+function playgamefromrpsorrpsls(index) {
+    move = moves[index]
+    window.location.href = 'results.html';
+}
 
 function returnresults() {
+    console.log(game);
+    console.log("rps");
+    console.log(rps);
+    console.log("rpsls");
+    console.log(rpsls);
     return game;
 }
 
-
-
-function playGame() {
-    console.log("aha")
-    fetch('/app/rps').then(response => response.json()).then(data => {
-        console.log(data);
-  });
-  if (opponent && rps) {
-    window.location.href = 'moverps.html';
-  }
-  else if (opponent && rpsls) {
-    window.location.href = 'moverpsls.html';
-  }
-  else {
-    
-    window.location.href = 'results.html';
-  }
-}
-
-function playgamefromrpsorrpsls() {
-    window.location.href = 'results.html';
-}
-
-
-
 function playingrps() {
-    rps = true;
-    rpsls = false;
-    console.log(rps);
-    console.log(rpsls);
+    if (opponent) {
+        window.location.href = 'moverps.html';
+    }
+    else {
+        window.location.href = 'results.html';
+    }
 }
 
 function playingrpsls() {
-    rps = false;
-    rpsls = true;
-    console.log(rps);
-    console.log(rpsls);
+    if (opponent) {
+        window.location.href = 'moverpsls.html';
+    }
+    else {
+        window.location.href = 'results.html';
+    }
 }
 
 
 function playingopponent() {
     opponent = !opponent;
     console.log(opponent);
+    var element = document.getElementById("my-div");
+    var otherelement = document.getElementById("other-div");
+    element.hidden = !element.hidden;
+    otherelement.hidden = !otherelement.hidden;
 }
+
 
 function startOver() {
     console.log("Need to work on this")
     window.location.href = 'index.html';
-}
-
-function pickmove(index) {
-    move = moves[index];
-    console.log(move);
 }

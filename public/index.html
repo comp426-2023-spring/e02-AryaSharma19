@@ -1,28 +1,46 @@
 <html>
     <head>
         <title>Arya's Rock Paper Shoot</title>
+        <link rel="icon" href="data:," />
         <!-- Link to your script file(s) and CSS in here somewhere -->
 
         <link href="./styles.css" rel="stylesheet">
 		<script src="./scripts.js"></script>
     </head>
     <body>
+        <form id="rps-input">
+            
+        
+        
+        </form>
+
+
+
         <body> <!-- body onload="playingrps()" -->
-            <form id="userinput" class="" action="javascript:void(0);">
-                <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
-                <label for="rps">Play rock, paper, scissors?</label>
-                <br/><br/>
-                <input type="radio" id="rpsls" name="game" value="rpsls" onclick="playingrpsls()">
-                <label for="rpsls">Play rock, paper, scissors, lizard, Spock?</label>
-                <br/><br/>
-                <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
-                <label for="opponent">Play against an opponent?</label>
-            </form>
+            Would you like to play against somone?
             <br/><br/>
-        <button type="button" id="play" onclick="playGame()">Play</button>
+            <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
+            <label for="opponent">Play against an opponent</label>
+            <br/><br/>
+            Which game ould you like to play? 
+            <br/><br/>
+            rock, paper, scissors
+            <button type="button" id="rps" onclick="playingrps()">play</button>
+            <br/><br/>
+            rock, paper, scissors, lizard,spock
+            <button type="button" id="rpsls" onclick="playingrpsls()">play</button>
+            <br/><br/>
+        <body>
+        
+        
+        
         <button type="button" id="startover" onclick="startOver()">Start Over</button>
+        
     <!-- Your interface markup goes here -->
     <!-- For interface examples, look in the `/examples/` directory in the root of your starter code repo. -->
     </body>
+    <br/><br/>
+    <div id="my-div">See How they Run</div>
+    <div id="other-div" hidden="false">I do</div>
 </body>
 </html>
