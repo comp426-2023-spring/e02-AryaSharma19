@@ -40,6 +40,6 @@ function playingopponent() {
 
 
 function startOver() {
-    console.log("Need to work on this")
-    window.location.href = 'index.html';
+    rps = true;
+    
 }
