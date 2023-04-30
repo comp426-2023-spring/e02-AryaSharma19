@@ -11,14 +11,19 @@ var rps_endpoint = "/app/rps/play/";
 var rpsls_endpoint = "/app/rpsls/play/";
  
 function playgamefromrpsorrpsls(index) {
-    move = moves[index]
-    
+    move = moves[index];
 }
 
 function firstsubmit() {
     if (opponent) {
         document.getElementById("opponent-and-game").hidden = true;
         document.getElementById("rps-input").hidden = false;
+        if (rps) {
+            document.getElementById("lizard").hidden = true;
+            document.getElementById("spock").hidden = true;
+            document.getElementsByClassName("lizard-label").hidden = true;
+            document.getElementsByClassName("spock-label").hidden = true;
+        }
     } else { 
         if (rps) {
             
@@ -40,8 +45,7 @@ function firstsubmit() {
                 document.getElementById("opponent-and-game").hidden = true;
                 document.getElementById("results").hidden = false;
             });
-        }
-        
+        }       
     }
 }
 
@@ -56,8 +60,14 @@ function secondsubmit() {
 
 
 function playingrps() {
-    rps = !rps;
+    rps = true;
 }
+
+function playingrpsls() {
+    rps = false;
+}
+
+
 
 function playingopponent() {
     opponent = !opponent;
