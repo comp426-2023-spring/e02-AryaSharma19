@@ -2,10 +2,19 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 
+var opponent_and_game = document.getElementById("opponent-and-game");
+var rps_input = document.getElementById("rps-input");
+var rps_button = document.getElementById("rps");
+var opponent_button = document.getElementById("opponent");
+
+
+
+
+
 var opponent = false;
 const moves = ["rock", "paper", "scissors", "lizard", "spock"];
-var rps = true
-move = ""
+var rps = true;
+var move = "";
 
 //fetch('/app/rps').then(response => response.json()).then(data => {
     //console.log(data);
@@ -39,5 +48,8 @@ function playingopponent() {
 
 function startOver() {
     rps = true;
-
+    opponent = false;
+    move = "";
+    rps_button.checked = true;
+    opponent_button.checked = false;
 }

@@ -13,7 +13,7 @@
     </head>
     <body>
         
-        <form id="opponent">
+        <form id="opponent-and-game">
             Which game would you like to play?
             <br/><br/>
             <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
@@ -46,7 +46,7 @@
             <button type="button" id="secondsubmit" onclick="secondsubmit()">Submit</button>
         </form>
 
-        <div id="results">
+        <div id="results" hidden="true">
             In The Works!
         </div>
 
@@ -54,6 +54,10 @@
         <br/><br/>
         <div style="text-align:center">
             <button type="button" id="startover" onclick="startOver()" style="text-align:center">Start Over</button>
+            <br/><br/>
+            <button type="button" id="rules-button" onclick="startOver()" style="text-align:center">View Rules</button>
+            <div id="rules">Need To Change</div>
+
         </div>
         
         <br/><br/>
