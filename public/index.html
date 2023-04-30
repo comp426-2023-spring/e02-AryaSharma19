@@ -27,7 +27,7 @@
             <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
             <label for="opponent">Play against an opponent</label>
             <br/><br/>
-            <button type="button" id="firstsubmit" onclick="firstsubmit()">Submit</button>
+            <button type="button" id="first-submit" onclick="firstsubmit()">Submit</button>
             <br/><br/>
         </form>
         
@@ -43,21 +43,23 @@
 			<input type="radio" id="spock" name="shot" value="spock" class="rpsls shots" onclick="playgamefromrpsorrpsls(4)">
 			<label class="shots rpsls">Spock</label>
             <br/><br/>
-            <button type="button" id="secondsubmit" onclick="secondsubmit()">Submit</button>
+            <button type="button" id="second-submit" onclick="secondsubmit()">Submit</button>
         </form>
 
-        <div id="results" hidden="true">
-            In The Works!
-        </div>
-
+        <div id="results" hidden="true"></div>
 
         <br/><br/>
         <div style="text-align:center">
-            <button type="button" id="startover" onclick="startOver()" style="text-align:center">Start Over</button>
+            <button type="button" id="startover" onclick="startOver()">Start Over</button>
             <br/><br/>
-            <button type="button" id="rules-button" onclick="startOver()" style="text-align:center">View Rules</button>
-            <div id="rules">Need To Change</div>
 
+            <form id="rules-form">
+                <button type="button" id="rules-button" onclick="viewrules()">View Rules</button>
+                <br/><br/>
+                <div id="rules" hidden="true"></div>
+                <br/><br/>
+                <button type="button" id="hide-rules-button" onclick="hiderules()" hidden="true">Hide Rules</button>
+            </form>
         </div>
 
     </body>
