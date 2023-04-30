@@ -4,6 +4,7 @@
 
 var opponent = false;
 const moves = ["rock", "paper", "scissors", "lizard", "spock"];
+var rps = true
 
 //fetch('/app/rps').then(response => response.json()).then(data => {
     //console.log(data);
@@ -12,7 +13,7 @@ const moves = ["rock", "paper", "scissors", "lizard", "spock"];
 
 function playgamefromrpsorrpsls(index) {
     move = moves[index]
-    window.location.href = 'results.html';
+    
 }
 
 function returnresults() {
@@ -25,27 +26,12 @@ function returnresults() {
 }
 
 function playingrps() {
-    if (opponent) {
-        window.location.href = 'moverps.html';
-    }
-    else {
-        window.location.href = 'results.html';
-    }
+    rps = !rps;
 }
-
-function playingrpsls() {
-    if (opponent) {
-        window.location.href = 'moverpsls.html';
-    }
-    else {
-        window.location.href = 'results.html';
-    }
-}
-
 
 function playingopponent() {
     opponent = !opponent;
-    console.log(opponent);
+    
     var element = document.getElementById("my-div");
     var otherelement = document.getElementById("other-div");
     element.hidden = !element.hidden;

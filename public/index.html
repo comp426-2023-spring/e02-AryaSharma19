@@ -8,13 +8,38 @@
 		<script src="./scripts.js"></script>
     </head>
     <body>
+        
+        <form id="opponent">
+            Would you like to play against somone?
+            <br/><br/>
+            <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
+            <label for="opponent">Play against an opponent</label>
+            <br/><br/>
+            <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
+			<label for="rps">Play rock, paper, scissors?</label>
+			<br/><br/>
+			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="playingrps()">
+			<label for="rpsls">Play rock, paper, scissors, lizard, Spock?</label>
+			<br/><br/>
+        </form>
+
+
+        <br/><br/>
+
+
+
+        
         <form id="rps-input" hidden="true">
             <button type="button" id="rock" onclick="playgamefromrpsorrpsls(0)">rock</button>
             <button type="button" id="paper" onclick="playgamefromrpsorrpsls(1)">paper</button>
             <button type="button" id="scissors" onclick="playgamefromrpsorrpsls(2)">scissors</button>
         </form>
 
-        <form id="rpsls-input" hidden="true">
+
+        <br/><br/>
+
+
+        <form id="rpsls-input" hidden="false">
             <button type="button" id="rock" onclick="playgamefromrpsorrpsls(0)">rock</button>
             <button type="button" id="paper" onclick="playgamefromrpsorrpsls(1)">paper</button>
             <button type="button" id="scissors" onclick="playgamefromrpsorrpsls(2)">scissors</button>
@@ -22,27 +47,8 @@
             <button type="button" id="spock" onclick="playgamefromrpsorrpsls(4)">spock</button>
         </form>
 
-
-
-
-
-
-        <body> <!-- body onload="playingrps()" -->
-            Would you like to play against somone?
-            <br/><br/>
-            <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
-            <label for="opponent">Play against an opponent</label>
-            <br/><br/>
-            Which game ould you like to play? 
-            <br/><br/>
-            rock, paper, scissors
-            <button type="button" id="rps" onclick="playingrps()">play</button>
-            <br/><br/>
-            rock, paper, scissors, lizard,spock
-            <button type="button" id="rpsls" onclick="playingrpsls()">play</button>
-            <br/><br/>
-        <body>
-        
+    
+ 
         
         
         <button type="button" id="startover" onclick="startOver()">Start Over</button>
