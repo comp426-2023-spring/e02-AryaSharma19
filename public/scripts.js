@@ -2,14 +2,6 @@
 // check out the coin-server example from a previous COMP 426 semester.
 // https://github.com/jdmar3/coinserver
 
-var opponent_and_game = document.getElementById("opponent-and-game");
-var rps_input = document.getElementById("rps-input");
-var rps_button = document.getElementById("rps");
-var opponent_button = document.getElementById("opponent");
-
-
-
-
 
 var opponent = false;
 const moves = ["rock", "paper", "scissors", "lizard", "spock"];
@@ -26,10 +18,28 @@ function playgamefromrpsorrpsls(index) {
     
 }
 
-function firstsubmit() {}
+function firstsubmit() {
+    if (opponent) {
+        document.getElementById("opponent-and-game").hidden = true;
+        document.getElementById("rps-input").hidden = false;
+    } else {
+        
+        
+        
+        
+        
+        document.getElementById("opponent-and-game").hidden = true;
+        document.getElementById("results").hidden = false;
+    }
+}
 
 
-function secondsubmit() {}
+function secondsubmit() {
+
+
+    document.getElementById("rps-input").hidden = true;
+    document.getElementById("results").hidden = false;
+}
 
 
 
@@ -39,17 +49,18 @@ function playingrps() {
 
 function playingopponent() {
     opponent = !opponent;
-    
-    var element = document.getElementById("my-div");
-    var otherelement = document.getElementById("other-div");
-    element.hidden = !element.hidden;
-    otherelement.hidden = !otherelement.hidden;
 }
 
 function startOver() {
     rps = true;
     opponent = false;
     move = "";
-    rps_button.checked = true;
-    opponent_button.checked = false;
+
+
+    document.getElementById("results").innerHTML = "";
+    document.getElementById("rps-input").reset();
+    document.getElementById("opponent-and-game").reset();
+    document.getElementById("results").hidden = true;
+    document.getElementById("rps-input").hidden = true;
+    document.getElementById("opponent-and-game").hidden = false;
 }
