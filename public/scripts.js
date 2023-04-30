@@ -5,6 +5,7 @@
 var opponent = false;
 const moves = ["rock", "paper", "scissors", "lizard", "spock"];
 var rps = true
+move = ""
 
 //fetch('/app/rps').then(response => response.json()).then(data => {
     //console.log(data);
@@ -16,14 +17,12 @@ function playgamefromrpsorrpsls(index) {
     
 }
 
-function returnresults() {
-    console.log(game);
-    console.log("rps");
-    console.log(rps);
-    console.log("rpsls");
-    console.log(rpsls);
-    return game;
-}
+function firstsubmit() {}
+
+
+function secondsubmit() {}
+
+
 
 function playingrps() {
     rps = !rps;
@@ -38,8 +37,7 @@ function playingopponent() {
     otherelement.hidden = !otherelement.hidden;
 }
 
-
 function startOver() {
     rps = true;
-    
+
 }

@@ -2,20 +2,14 @@
     <head>
         <title>Arya's Rock Paper Shoot</title>
         <link rel="icon" href="data:," />
-        <!-- Link to your script file(s) and CSS in here somewhere -->
-
         <link href="./styles.css" rel="stylesheet">
 		<script src="./scripts.js"></script>
-
         <div style="text-align:center">
             Welcome to Arya's COMP 426 Final Project:
             <br/>
             Rock, Paper, Scissors
-            <br/>
+            <br/><br/>
         </div>
-
-
-
     </head>
     <body>
         
@@ -33,7 +27,8 @@
             <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
             <label for="opponent">Play against an opponent</label>
             <br/><br/>
-
+            <button type="button" id="secondsubmit" onclick="secondsubmit()">Submit</button>
+            <br/><br/>
         </form>
         
         <form id="rps-input" hidden="true">
@@ -47,9 +42,13 @@
 			<label class="shots rpsls">Lizard</label>
 			<input type="radio" id="spock" name="shot" value="spock" class="rpsls shots" onclick="playgamefromrpsorrpsls(4)">
 			<label class="shots rpsls">Spock</label>
+            <br/><br/>
+            <button type="button" id="secondsubmit" onclick="secondsubmit()">Submit</button>
         </form>
 
-        
+        <div id="results">
+            In The Works!
+        </div>
 
 
         <br/><br/>
