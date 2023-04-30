@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="en">
     <head>
         <title>Arya's Rock Paper Shoot</title>
         <link rel="icon" href="data:,">
@@ -6,14 +7,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="./styles.css" rel="stylesheet">
 		<script src="./scripts.js"></script>
+    </head>
+    <body>
         <div style="text-align:center">
             Welcome to Arya's COMP 426 Final Project:
             <br>
             Rock, Paper, Scissors
             <br><br>
         </div>
-    </head>
-    <body>
         <form id="opponent-and-game">
             Which game would you like to play?
             <br><br>
@@ -31,7 +32,7 @@
             <button type="button" id="first-submit" onclick="firstsubmit()">Submit</button>
             <br><br>
         </form>
-        <form id="rps-input" hidden="true">
+        <form id="rps-input" hidden>
             <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked="checked" onclick="playgamefromrpsorrpsls(0)">
             <label class="shots rps">Rock</label>
 			<input type="radio" id="paper" name="shot" value="paper" class="rps shots" onclick="playgamefromrpsorrpsls(1)">
@@ -45,18 +46,17 @@
             <br><br>
             <button type="button" id="second-submit" onclick="secondsubmit()">Submit</button>
         </form>
-        <div id="results" hidden="true"></div>
+        <div id="results" hidden></div>
         <br><br>
         <div style="text-align:center">
             <button type="button" id="startover" onclick="startOver()">Start Over</button>
             <br><br>
-
             <form id="rules-form">
                 <button type="button" id="rules-button" onclick="viewrules()">View Rules</button>
                 <br><br>
-                <div id="rules" hidden="true"></div>
+                <div id="rules" hidden></div>
                 <br><br>
-                <button type="button" id="hide-rules-button" onclick="hiderules()" hidden="true">Hide Rules</button>
+                <button type="button" id="hide-rules-button" onclick="hiderules()" hidden>Hide Rules</button>
             </form>
         </div>
     </body>
