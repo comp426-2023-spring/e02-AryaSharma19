@@ -16,14 +16,17 @@ function playgamefromrpsorrpsls(index) {
 
 function firstsubmit() {
     if (opponent) {
+        
         document.getElementById("opponent-and-game").hidden = true;
         document.getElementById("rps-input").hidden = false;
         if (rps) {
+            document.getElementById("lizard-label").hidden = true;
+            document.getElementById("spock-label").hidden = true;
             document.getElementById("lizard").hidden = true;
-            document.getElementById("spock").hidden = true;
-            document.getElementsByClassName("lizard-label").hidden = true;
-            document.getElementsByClassName("spock-label").hidden = true;
+            document.getElementById("spock").hidden = true;    
         }
+        
+
     } else { 
         if (rps) {
             
@@ -51,10 +54,27 @@ function firstsubmit() {
 
 
 function secondsubmit() {
-
-
+    document.getElementById("lizard-label").hidden = false;
+    document.getElementById("spock-label").hidden = false;
+    document.getElementById("lizard").hidden = false;
+    document.getElementById("spock").hidden = false;
     document.getElementById("rps-input").hidden = true;
-    document.getElementById("results").hidden = false;
+
+    if (rps) {
+        var api_call = rps_endpoint + move;
+        fetch(api_call).then(response => response.json()).then(data => {
+            document.getElementById("results").innerText = JSON.stringify(data);
+            document.getElementById("opponent-and-game").hidden = true;
+            document.getElementById("results").hidden = false;
+        });
+    } else {
+        var api_call = rpsls_endpoint + move;
+        fetch(api_call).then(response => response.json()).then(data => {
+            document.getElementById("results").innerText = JSON.stringify(data);
+            document.getElementById("opponent-and-game").hidden = true;
+            document.getElementById("results").hidden = false;
+        });
+    }  
 }
 
 
@@ -66,7 +86,6 @@ function playingrps() {
 function playingrpsls() {
     rps = false;
 }
-
 
 
 function playingopponent() {
