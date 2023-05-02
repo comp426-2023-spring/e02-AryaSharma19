@@ -1,7 +1,0 @@
-{
-    "rps" : true,
-    "rpsls" : false,
-    "move" : "rock",
-    "opponent" : false,
-    "game" : "testing aha"
-}
