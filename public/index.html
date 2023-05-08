@@ -18,7 +18,7 @@
         <form id="opponent-and-game" onsubmit="firstsubmit(event)">
             Which game would you like to play?
             <br><br>
-            <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
+            <input type="radio" id="rps" name="game" value="rps" checked onclick="playingrps()">
 			<label for="rps">Play rock, paper, scissors?</label>
 			<br><br>
 			<input type="radio" id="rpsls" name="game" value="rpsls" onclick="playingrpsls()">
@@ -33,7 +33,7 @@
             <br><br>
         </form>
         <form id="rps-input" onsubmit="secondsubmit(event)" hidden>
-            <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked="checked" onclick="playgamefromrpsorrpsls(0)">
+            <input type="radio" id="rock" name="shot" value="rock" class="rps shots" checked onclick="playgamefromrpsorrpsls(0)">
             <label class="shots rps">Rock</label>
 			<input type="radio" id="paper" name="shot" value="paper" class="rps shots" onclick="playgamefromrpsorrpsls(1)">
 			<label class="shots rps">Paper</label>
