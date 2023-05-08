@@ -38,7 +38,6 @@ function firstsubmit(event) {
                 document.getElementById("results").innerText = JSON.stringify(data);
                 document.getElementById("opponent-and-game").hidden = true;
                 document.getElementById("results").hidden = false;
-                console.log("reachedreached");
             });
         } else {
             
@@ -55,7 +54,8 @@ function firstsubmit(event) {
 }
 
 
-function secondsubmit() {
+function secondsubmit(event) {
+    event.preventDefault();
     document.getElementById("lizard-label").hidden = false;
     document.getElementById("spock-label").hidden = false;
     document.getElementById("lizard").hidden = false;
@@ -95,7 +95,8 @@ function playingopponent() {
 }
 
 
-function viewrules() {
+function viewrules(event) {
+    event.preventDefault();
     document.getElementById("rules").innerText =
     `Rules for Rock Paper Scissors:
 
