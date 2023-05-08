@@ -14,7 +14,8 @@ function playgamefromrpsorrpsls(index) {
     move = moves[index];
 }
 
-function firstsubmit() {
+function firstsubmit(event) {
+    event.preventDefault();
     if (opponent) {
         
         document.getElementById("opponent-and-game").hidden = true;
@@ -28,8 +29,8 @@ function firstsubmit() {
         
 
     } else { 
-        if (rps) {
-            
+        
+        if (rps) { 
             var random_move = Math.floor(Math.random() * 3);
             random_move = moves[random_move];
             var api_call = rps_endpoint + random_move;
@@ -37,6 +38,7 @@ function firstsubmit() {
                 document.getElementById("results").innerText = JSON.stringify(data);
                 document.getElementById("opponent-and-game").hidden = true;
                 document.getElementById("results").hidden = false;
+                console.log("reachedreached");
             });
         } else {
             

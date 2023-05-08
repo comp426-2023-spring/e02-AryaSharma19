@@ -15,7 +15,7 @@
             Rock, Paper, Scissors, Shoot
         </div>
         <br><br>
-        <form id="opponent-and-game">
+        <form id="opponent-and-game" onsubmit="firstsubmit(event)">
             Which game would you like to play?
             <br><br>
             <input type="radio" id="rps" name="game" value="rps" checked="checked" onclick="playingrps()">
@@ -29,7 +29,7 @@
             <input type="checkbox" id="opponent" name="playtype" value="opponent" onclick="playingopponent()">
             <label for="opponent">Play against an opponent</label>
             <br><br>
-            <button type="button" id="first-submit" onclick="firstsubmit()">Submit</button>
+            <button type="submit" id="first-submit">Submit</button>
             <br><br>
         </form>
         <form id="rps-input" hidden>
